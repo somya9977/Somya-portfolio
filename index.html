@@ -1,26 +1,98 @@
-<!DOCTYPE html>
+TYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Saumya Portfolio</title>
+    <title>Somya Portflio</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="styles/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .containers {
+    display: flex;
+    justify-content: center; /* Center the cards horizontally */
+    align-items: center; /* Center the cards vertically */
+    gap: 20px;
+    width: 100%;
+    max-width: 800px; /* Limit the maximum width */
+    margin: auto; /* Center the container itself */
+}
+
+.project-card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 10000px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.project-card .content {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.project-card h3 {
+    margin: 0 0 10px;
+}
+
+.project-card p {
+    margin: 0 0 20px;
+}
+
+.project-card button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.project-card button:hover {
+    background-color: #0056b3;
+}
+
+.project-card:hover {
+    transform: perspective(600px) rotateY(15deg);
+}
+    </style>
+
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-
+        <a href="index.html" class="navbar-brand ml-lg-3">
+            <h1 class="m-0 display-5"><span class="text-primary">Somya</span>Folio</h1>
+        </a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,29 +101,27 @@
                 <a href="#home" class="nav-item nav-link active">Home</a>
                 <a href="#about" class="nav-item nav-link">About</a>
                 <a href="#qualification" class="nav-item nav-link">Quality</a>
+                <a href="#project" class="nav-item nav-link">Projects</a>
                 <a href="#skill" class="nav-item nav-link">Skill</a>
-                <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
                 <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
+            <a href="#contact" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
         </div>
     </nav>
     <!-- Navbar End -->
 
 
     <!-- Video Modal Start -->
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
-                    </button>
+                    </button>        
                     <!-- 16:9 aspect ratio -->
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"
-                            allow="autoplay"></iframe>
+                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
                     </div>
                 </div>
             </div>
@@ -140,9 +210,10 @@
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Education & Projects</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Education</h1>
             </div>
             <div class="row align-items-center">
+                
                 <div class="col-lg-6">
                     <h3 class="mb-4">My Education</h3>
                     <div class="border-left border-primary pt-2 pl-4 ml-2">
@@ -168,7 +239,8 @@
 
                     </div>
                 </div>
-                <div class="col-lg-6">
+                
+               <!-- <div class="col-lg-6">
                     <h3 class="mb-4">My Projects</h3>
                     <div class="border-left border-primary pt-2 pl-4 ml-2">
                         <div class="position-relative mb-4">
@@ -198,11 +270,46 @@
                             <a href="https://somya9977.github.io/login-page/" target=”_blank”><button>view project</button></a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
     <!-- Qualification End -->
+
+ <!-- project start-->
+     
+     
+ <div class="position-relative d-flex align-items-center justify-content-center">
+    <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h1>
+    <h1 class="position-absolute text-uppercase text-primary">project</h1>
+</div>
+<div class="containers" id="project">
+<div class="project-card" style="background-image: url('assets/images/pexels-daniel-reche-718241-3721941.jpg');">
+    <div class="content">
+        <h3>Project 1</h3>
+        <p>Designed a music website using HTML, CSS and Java Script to play music on the web page</p>
+        <a href="https://somya9977.github.io/music-clone/" target=”_blank”><button>view project</button></a>
+    </div>
+</div>
+<div class="project-card" style="background-image: url('assets/images/download.jpg');">
+    <div class="content">
+        <h3>Project 2</h3>
+        <p>Developed a translation tool in HTML, CSS, and JavaScript to assist with language
+            translation</p>
+            <a href="https://somya9977.github.io/language-translation-/" target=”_blank”><button>view project</button></a>
+    </div>
+</div>
+<div class="project-card" style="background-image: url('assets/images/hqdefault.jpg');">
+    <div class="content">
+        <h3>Project 3</h3>
+        <p>Designed a login page using HTML,CSS with glow effect</p>
+        <a href="https://somya9977.github.io/login-page/" target=”_blank”><button>view project</button></a>
+    </div>
+</div>
+</div>
+
+<!-- project start-->
+
 
 
     <!-- Skill Start -->
@@ -264,10 +371,12 @@
     <!-- Skill End -->
 
 
+   
 
 
-    <!-- Contact Start -->
-    <div class="container-fluid py-5" id="contact">
+    
+     <!-- Contact Start -->
+     <div class="container-fluid py-5" id="contact">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
@@ -278,6 +387,7 @@
                 width="100%" height="1030" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         </div>
     </div>
+    <!-- Contact End -->
     <!-- Contact End -->
 
 
@@ -318,9 +428,19 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-    <script src="main.js"></script>
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
 
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
-</html>
+</html><!DOC
